@@ -86,7 +86,7 @@ nav ul li a {
  }
 .cutecloud {
     animation-name: floating;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     width: 30vw;
@@ -97,6 +97,7 @@ nav ul li a {
     left: 50%;
     max-width: 20%;
     height: auto;
+
 }
 
 .oc {
@@ -131,8 +132,8 @@ nav ul li a {
 
 
 .moon {
-    animation-name: floating;
-    animation-duration: 3s;
+     animation-name: floating;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     width: 30vw;
