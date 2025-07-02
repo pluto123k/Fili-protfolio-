@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #008afb; 
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center; /* Center text */
+        }
+
+        nav {
+            margin-top: 10px; /* Space between title and nav */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px; /* Space between links */
+            font-size: 18px; /* Font size for links */
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust box size */
+            gap: 20px; /* Space between boxes */
+            width: 95%; /* Width of the gallery */
+            height: 95%; /* Height of the gallery */
+            padding: 10px; /* Padding around the gallery */
+            box-sizing: border-box;
+        }
+
+        .canvas {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #333;
+            height: 200px; /
+            overflow: hidden; /* Prevent overflow */
+            background-size: cover; /* Cover the box */
+            background-position: center; /* Center the image */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+        }
+
+        .canvas:hover {
+            transform: scale(2); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Art Gallery</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+    function createCanvas(imageUrl) {
+        const canvas = document.createElement('div');
+        canvas.className = 'canvas';
+        canvas.style.backgroundImage = `url(${imageUrl})`; // Set background image
+        return canvas;
+    }
+
+    function populateGallery(images) {
+        const gallery = document.getElementById('gallery');
+        images.forEach(imageUrl => {
+            const canvas = createCanvas(imageUrl);
+            gallery.appendChild(canvas);
+        });
+    }
+
+    // Array of image URLs for the gallery
+    const imageUrls = [
+        'image/cstttt.png',
+        'https://via.placeholder.com/200x200?text=Art+2',
+        'https://via.placeholder.com/200x200?text=Art+2',
+        'https://via.placeholder.com/200x200?text=Art+3',
+        'https://via.placeholder.com/200x200?text=Art+4',
+        'https://via.placeholder.com/200x200?text=Art+5',
+        'https://via.placeholder.com/200x200?text=Art+6',
+        'https://via.placeholder.com/200x200?text=Art+7',
+        'https://via.placeholder.com/200x200?text=Art+8',
+        'https://via.placeholder.com/200x200?text=Art+9',
+    ];
+
+    // Create canvases with images
+    populateGallery(imageUrls);
+</script>
+
+</body>
+</html>

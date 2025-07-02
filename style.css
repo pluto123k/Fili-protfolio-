@@ -68,67 +68,24 @@ nav ul li a {
     }
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes moveLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100vw); 
-    }
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 @keyframes moveCloud {
-     0% {
-     transform: translateX(-100%);
-     }
+    0%, 100% {
+       transform: translateX(0); 
+    }
     50% {
-    transform: translateX(calc(100vw - 100px)); 
+       transform: translateX(50px); 
+     }
 }
-100% {
-    transform: translateX(-100%);
-  }
-}
+@keyframes moveDuck {
+     0% {
+        left: -100px; 
+    }
+    100% {
+    left: 100%; 
+    }
+ }
     
 
-
-.cutecloud {
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    width: 30vw;
-    
-}
-.cutecloud {
-    cursor: pointer;
-    max-width: 8%;
-    position: absolute; 
-    top: 10px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    max-width: 30%; 
-    height: auto;
-    transform: translateX(-50%); 
-}
 .oc {
     animation-name: floating;
     animation-duration: 2s;
@@ -208,15 +165,6 @@ nav ul li a {
     height: auto;
     transform: translateX(-50%);  
 }
-
-.small-cloud
-{
-    max-width: 40%;
-    height: auto;
-    position: absolute;
-    bottom: 15px;
-    left: 70% ;
-}
 .cloud1 {
     position: absolute;
     bottom: 10px;
@@ -227,29 +175,30 @@ nav ul li a {
    height: 149px; 
    margin-left: -794.47px; 
    margin-top: -74.5px;
-   z-index: 301; 
+   animation: moveCloud 10s linear infinite;
+   animation-duration: 8s;
 
 }
 .cloud2 {
      position: absolute;
     left: 50%;
-   top: 80%;
+   top: 90%;
    width: 1588.94px; 
    height: 149px; 
    margin-left: -794.47px; 
    margin-top: -74.5px;
    z-index: 302;
-    animation-;
+   animation: moveCloud 10s linear infinite;
+   animation-duration: 6s;
 }
 
 
 .duck {
     max-width: 20%; 
     height: auto;
-    float: right;
-    animation-fill-mode: forwards;
+    animation: moveDuck 2s forwards;
     display: none;
-    animation-duration: 3s; 
+  
 }
 
 
@@ -261,26 +210,21 @@ nav ul li a {
 .portfolio {
     text-align: center;
 }
-
-.image1 {
-    position: relative; 
-}
-.image1 
-        .image1 img {
-            max-width: 30%; 
-            height: auto;
-        }
-    
-@keyframes moveRight {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); } 
-}
-
-
+  .portfolio-box {
+ background-color: rgba(255, 255, 255, 0.137); 
+            border: 1px solid #ccc; /* Box border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 20px; /* Padding inside the box */
+            width: 100%; /* Set width to 80% of the container */
+            height: 500px;
+            max-width: 1800px; /* Optional: Set a maximum width */
+            margin: 20px auto; /* Center the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 .side-navigation {
     position: absolute;
-    right: 10%;
-    top: 50%;
+    right: 8%;
+    top: 65%;
     transform: translateY(-50%);
 }
 
