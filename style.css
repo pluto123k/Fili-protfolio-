@@ -1,0 +1,295 @@
+:root {
+    --blue-color: #0015ff;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #31c4f8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+.wrapper {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    gap: 7px;
+    list-style: none;
+}
+nav ul li a {
+  font-weight: bold;
+  font-size: 59px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.side-navigation{
+    font-weight: bold;
+    gap: 20px;
+    list-style:none;
+    color:aqua;
+    bottom: 40px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#flot {
+    position: relative; 
+    top: 5vh;
+    height: 100vh; 
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100vw); 
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes moveCloud {
+     0% {
+     transform: translateX(-100%);
+     }
+    50% {
+    transform: translateX(calc(100vw - 100px)); 
+}
+100% {
+    transform: translateX(-100%);
+  }
+}
+    
+
+
+.cutecloud {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 30vw;
+    
+}
+.cutecloud {
+    cursor: pointer;
+    max-width: 8%;
+    position: absolute; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    max-width: 30%; 
+    height: auto;
+    transform: translateX(-50%); 
+}
+.oc {
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 90vw;
+     position: absolute; 
+    left: 10px; 
+    bottom: -230px;
+    max-width: 65%; 
+    height: auto;
+}
+.protfolio {
+    position: relative; 
+ 
+}
+.phone {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 30vw;
+    animation: spin 1s linear infinite;
+    max-width: 10%; 
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+}
+
+
+
+.moon {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 30vw;
+    cursor: pointer;
+    max-width: 8%;
+    position: absolute; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    max-width: 30%; 
+    height: auto;
+    transform: translateX(-50%);  
+}
+.moon2 {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 10vw;
+    cursor: pointer;
+    max-width: 8%;
+    position: absolute; 
+    top: 20px; 
+    left: 40%; 
+    transform: translateX(-50%); 
+    max-width: 30%; 
+    height: auto;
+    transform: translateX(-50%);  
+}
+.yellowmoon {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 10vw;
+    cursor: pointer;
+    max-width: 8%;
+    position: absolute; 
+    top: 20px; 
+    left: 40%; 
+    transform: translateX(-50%); 
+    max-width: 30%; 
+    height: auto;
+    transform: translateX(-50%);  
+}
+
+.small-cloud
+{
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    bottom: 15px;
+    left: 70% ;
+}
+.cloud1 {
+    position: absolute;
+    bottom: 10px;
+    right: 70% ;
+    left: 50%;
+   top: 50%;
+   width: 1588.94px; 
+   height: 149px; 
+   margin-left: -794.47px; 
+   margin-top: -74.5px;
+   z-index: 301; 
+
+}
+.cloud2 {
+     position: absolute;
+    left: 50%;
+   top: 80%;
+   width: 1588.94px; 
+   height: 149px; 
+   margin-left: -794.47px; 
+   margin-top: -74.5px;
+   z-index: 302;
+    animation-;
+}
+
+
+.duck {
+    max-width: 20%; 
+    height: auto;
+    float: right;
+    animation-fill-mode: forwards;
+    display: none;
+    animation-duration: 3s; 
+}
+
+
+.section2 {
+    overflow: hidden; 
+    position: relative;
+}
+
+.portfolio {
+    text-align: center;
+}
+
+.image1 {
+    position: relative; 
+}
+.image1 
+        .image1 img {
+            max-width: 30%; 
+            height: auto;
+        }
+    
+@keyframes moveRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } 
+}
+
+
+.side-navigation {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.side-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-navigation ul li {
+    margin: 10px 0;
+}
+
