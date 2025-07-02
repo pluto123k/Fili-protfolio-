@@ -1,66 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>about</title>
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #00aaff;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+        } 
+        
+        header {
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex; /* Flexbox for layout */
+            max-width: 1200px; /* Limit max width */
+            margin: 0 auto; /* Center the container */
+            padding: 20px;
+        }
+
+        .left, .middle, .right {
+            flex: 1; /* Equal space for columns */
+            padding: 10px; /* Padding for spacing */
+        }
+
+        .left img {
+            max-width: 100%; /* Responsive image */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column; /* Stack the text vertically */
+            justify-content: center; /* Center content */
+            align-items: center; /* Center horizontally */
+        }
+
+        .right {
+            max-width: 20%;
+            display: flex;
+            flex-direction: column; /* Stack the boxes vertically */
+            gap: 20px; /* Space between boxes */
+        }
+      
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.3); /* Transparent background */
+            border: 2px solid rgba(255, 255, 255, 0.7); /* Border */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px; /* Padding inside boxes */
+            text-align: center; /* Center text */
+            backdrop-filter: blur(5px); /* Optional: blur effect for background */
+        }
+
+        .box img {
+            max-width: 50%; /* Responsive image for boxes */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .location {
+            text-align: center; /* Center text */
+            margin-top: 20px; /* Space above location */
+            font-size: 1.2em; /* Font size for location */
+        }
+
+        @keyframes moveCloud {
+            0%, 100% {
+                transform: translateX(0); 
+            }
+            50% {
+                transform: translateX(50px); 
+            }
+        }
+
+        .cloud5 {
+            position: absolute;
+            width: 90%; /* Set width to a percentage of the parent container */
+            max-width: 8000px; /* Limit max width */
+            height: auto; /* Maintain aspect ratio */
+            animation: moveCloud 10s linear infinite;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            z-index: -1;
+        } 
+
+        .grass-container {
+            position: absolute;
+            width: 100%; /* Full width */
+            height: 200px; /* Set a height for the grass image */
+            bottom: -100px; /* Position it at the bottom */
+            left: 0; /* Align to the left */
+            z-index: -1; /* Ensure it stays behind all other content */
+        }
+
+        .grass-container img {
+            width: 100%; /* Make the grass image fill the container's width */
+            height: auto;
+        }
+        .locationimg {
+            max-width: 50%; /* Responsive image for boxes */
+            height: auto; 
+        }
+    </style>
 </head>
 <body>
     <header>
-     <h1> About Me</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>    
+        <h1>About Me</h1>
+        <img src="image/cloud1.png" alt="cloud" class="cloud5">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>    
     </header>
-   
-    <p>Meet the creater</p>
-    
-    <p>Hi! My name is Fili Tekle. I go to Speedway High School, based on Indianapolis. I love making fun and emotion-filled art. I have passion for coding.</p>
-     <div class="image2" id="image1">  
-        <img src="image/earth.png" alt="Image 1">
+
+    <div class="container">
+        <div class="left">
+            <div class="box">
+                
+                <img src="image/pfp.png" alt="Hobby Image"> <!-- Replace with your image -->
+                <h3>Hobbies</h3>
+                <p>Painting</p>
+                <p>Cooking</p>
+            </div>
+        </div>
+        <div class="middle">
+            <h2>Fili Tekle</h2>
+            <p>I go to Speedway High School, based in Indianapolis. I love making fun and emotion-filled art. I have a passion for coding.</p>
+            <img src="image/location.jpg" class="locationimg" alt="location">
+        </div>
+        <div class="right">
+            <div class="box">
+                <h3>Favorite Food</h3>
+                <img src="image/fries.jpg" alt="Interest Image"> <!-- Replace with your image -->
+            </div>
+            <div class="box">
+                <h3>Skills</h3>
+                <img src="image/skills.png" alt="Skill Image"> <!-- Replace with your image -->
+                <p>Coding</p>
+            </div>
+        </div>
     </div>
-<style>
-    
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00aaff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-} 
-header {
-            background-color: #ffffff; 
-            color: rgb(0, 0, 0);
-            padding: 20px;
-            width: 100%;
-            text-align: center; /* Center text */
-}
-    .image2{
-    animation-name: floating;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    width: 90vw;
-    position: absolute; 
-    max-width: 70%; 
-    height: 300px;
-    right: 0px;
-    }
-    @keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-</style>
-
+    <div class="grass-container">
+        <img src="image/grass transparent.png" alt="grass">
+    </div>
 </body>
 </html>

@@ -19,53 +19,237 @@
                 </a>
             </ul>
         </nav>
-    
+    </div>
+  </header>
 
-    <div class="navigation">
+  <div class="navigation">
      <div id="flot">
             <img src="image/sittingonacloud.png" class="oc" alt="oc">
             <div class="image-container">
                <img src="image/filiname.jpeg" class="cutecloud" alt="Show Cloud"> 
-               <img src="image/mooooooooon.png" class="moon" alt="Moon Image">
-                <img src="image/yellowmoon.png" class="yellowmoon" alt="Yellow Moon">
-                <img src="image/Frame 1.png" class="moon2" alt="Moon2 image">   
-               
+               <img src="image/yellowmoon.png" class="yellowmoon" alt="Yellow Moon">
+               <img src="image/Frame 1.png" class="moon2" alt="Moon2 image">   
             </div>
         </div>
     
-<div class="section2">
-    <div class="protfolio">
-        <h1>Portfolio</h1>
-        </div>
+    <div class="section2">
+    <h1>Portfolio</h1>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <h2>Game 1</h2>
+                <p>Details about Game 1.</p>
+                <div class="section2">
+    <h1>Portfolio</h1>
+    <div class="portfolio-container">
         <div class="portfolio-box">
-            <p>skills</p>
+            <div class="title">The Jumping Spider</div>
+            <div class="story-opening">
+                <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_728ab22ba0c842468a897907be9a7075/flipanim/anim/2xqez9sn.gif" alt="Spider">
+                <h1>You spot a teeny, fuzzy spider on the counter. It blinks at you with its cute round eyes. Do you... </h1>
+            </div>
+
+            <div class="buttons">
+                <button class="option-one">Offer it a snack</button>
+                <button class="option-two">Take it outside</button>
+            </div>
+
+            <div class="option-one-screen" style="display: none;">
+                <h1>You put a piece of your sandwich on the counter.</h1>
+                <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_728ab22ba0c842468a897907be9a7075/flipanim/anim/5p37tskw.gif" alt="Spider happy">
+                <button class="option-one-continue">Continue</button>
+            </div>
+
+            <div class="option-two-screen" style="display: none;">
+                <h1>You carefully trap it under a glass and scoop it up outside.</h1>
+                <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_728ab22ba0c842468a897907be9a7075/flipanim/anim/c2idyaub.gif" alt="Spider outside">
+                <button class="option-two-continue">Continue</button>
+            </div>
+
+            <div class="option-one-end" style="display: none;">
+                <h1>The end! You made the spider happy!!</h1>
+                <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_728ab22ba0c842468a897907be9a7075/flipanim/anim/gx6s3lkb.gif" alt="Spider happy">
+            </div>
+
+            <div class="option-two-end" style="display: none;">
+                <h1>You released the spider outside your porch and watched it scurry away into the grass</h1>
+                <img src="https://storage.gra.cloud.ovh.net/v1/AUTH_728ab22ba0c842468a897907be9a7075/flipanim/anim/t958sl4i.gif" alt="Spider outside">
+            </div>
         </div>
+    </div>
+     <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const optionOneBtn = document.querySelector('.option-one');
+    const optionTwoBtn = document.querySelector('.option-two');
+    const optionOneScreen = document.querySelector('.option-one-screen');
+    const optionTwoScreen = document.querySelector('.option-two-screen');
+    const optionOneEnd = document.querySelector('.option-one-end');
+    const optionTwoEnd = document.querySelector('.option-two-end');
+    const optionOneContinueBtn = document.querySelector('.option-one-continue');
+    const optionTwoContinueBtn = document.querySelector('.option-two-continue');
+
+    optionOneBtn.addEventListener('click', () => {
+        document.querySelector('.story-opening').style.display = 'none';
+        document.querySelector('.buttons').style.display = 'none';
+        optionOneScreen.style.display = 'block';
+    });
+
+    optionTwoBtn.addEventListener('click', () => {
+        document.querySelector('.story-opening').style.display = 'none';
+        document.querySelector('.buttons').style.display = 'none';
+        optionTwoScreen.style.display = 'block';
+    });
+
+    optionOneContinueBtn.addEventListener('click', () => {
+        optionOneScreen.style.display = 'none';
+        optionOneEnd.style.display = 'block';
+    });
+
+    optionTwoContinueBtn.addEventListener('click', () => {
+        optionTwoScreen.style.display = 'none';
+        optionTwoEnd.style.display = 'block';
+    });
+});
+</script>
 </div>
-   <div id="flot">
-    <div class="cloud-container">
-    <img src="image/duck.png" alt=""Duck Image" class="duck">
-</div>
-<div class="cloud-container">
-    <img src="image/cloud1.png" alt="Cloud Image" class="cloud1">
-</div>
+ </div>
+            <div class="portfolio-box">
+                <h2>Game 2</h2>
+                <p>Details about Game 2.</p>
 
-<div class="cloud-container">
-    <img src="image/cloud1.png" alt="Cloud Image" class="cloud2">
-</div>
+        <div class="portfolio-box">
+            <div class="title">
+                <h1>Which Harry Potter House Do You Belong To?</h1>
+            </div>
+            <div class="questions">
+                <h3>What's your favorite color?</h3>
+                <div class="question1">
+                    <button id="red-button">A</button>
+                    <button id="blue-button">B</button>
+                    <br>
+                    <button id="yellow-button">C</button>
+                    <button id="green-button">D</button>
+                </div>
+                <h3>What's your ideal pet?</h3>
+                <div class="question2">
+                    <button id="lion-button">A lion</button>
+                    <button id="owl-button">An owl</button>
+                    <button id="badger-button">A badger</button>
+                    <button id="snake-button">A snake</button>
+                </div>
+                <h3>What's your favorite activity?</h3>
+                <div class="question3">
+                    <button id="sport-button">Playing a sport</button>
+                    <button id="books-button">Reading books</button>
+                    <button id="friends-button">Hanging out with friends</button>
+                    <button id="games-button">Playing video games</button>
+                </div>
+            </div>
+            <button id="result-button">Show Result</button>
+            <div class="result"></div>
+        </div>
+        <script>
+let Gryffindor = 0;
+let Ravenclaw = 0;
+let Hufflepuff = 0;
+let Slytherin = 0;
 
+let redButton = document.querySelector("#red-button");
+let blueButton = document.querySelector("#blue-button");
+let greenButton = document.querySelector("#green-button");
+let yellowButton = document.querySelector("#yellow-button");
+let lionButton = document.querySelector("#lion-button");
+let owlButton = document.querySelector("#owl-button");
+let badgerButton = document.querySelector("#badger-button");
+let snakeButton = document.querySelector("#snake-button");
+let sportButton = document.querySelector("#sport-button");
+let bookButton = document.querySelector("#books-button"); 
+let gamesButton = document.querySelector("#games-button");
+let friendsButton = document.querySelector("#friends-button");
+let resultBtn = document.querySelector("#result-button");
 
+redButton.addEventListener("click", function() {
+    Gryffindor++;
+});
 
+blueButton.addEventListener("click", function() {
+    Ravenclaw++;
+});
 
-    <div class="side-navigation"> <!-- Side navigation -->
-        <ul>
-            <li><a href="#">Contact info</a></li>
-            <li><span onclick="toggleDuck()" style="cursor: pointer; color: rgb(255, 255, 255); text-decoration: underline;">Cool skating duck</span></li>
-            <li><a href="#">Coloring page</a></li>
-        </ul>
+yellowButton.addEventListener("click", function() {
+    Hufflepuff++;
+});
+
+greenButton.addEventListener("click", function() {
+    Slytherin++;
+});
+
+lionButton.addEventListener("click", function() {
+    Gryffindor++;
+});
+
+owlButton.addEventListener("click", function() {
+    Ravenclaw++;
+});
+
+badgerButton.addEventListener("click", function() {
+    Hufflepuff++;
+});
+
+snakeButton.addEventListener("click", function() {
+    Slytherin++;
+});
+
+sportButton.addEventListener("click", function() {
+    Gryffindor++;
+});
+
+bookButton.addEventListener("click", function() {
+    Ravenclaw++;
+});
+
+friendsButton.addEventListener("click", function() {
+    Hufflepuff++;
+});
+
+gamesButton.addEventListener("click", function() {
+    Slytherin++;
+});
+
+resultBtn.addEventListener("click", function() {
+    let house = "";
+
+    if (Gryffindor > Ravenclaw && Gryffindor > Hufflepuff && Gryffindor > Slytherin) {
+        house = "Gryffindor";
+    } else if (Ravenclaw > Gryffindor && Ravenclaw > Hufflepuff && Ravenclaw > Slytherin) {
+        house = "Ravenclaw";
+    } else if (Hufflepuff > Gryffindor && Hufflepuff > Ravenclaw && Hufflepuff > Slytherin) {
+        house = "Hufflepuff";
+    } else if (Slytherin > Gryffindor && Slytherin > Ravenclaw && Slytherin > Hufflepuff) {
+        house = "Slytherin";
+    } else {
+        house = "...";
+    }
+
+    document.querySelector('.result').innerText = "You belong to " + house + "!";
+});
+</script>
     </div>
 </div>
+        </div>
+    </div>
+
+    <div id="flot">
+        <div class="cloud-container">
+            <img src="image/duck.png" alt="Duck Image" class="duck">
+        </div>
+        <div class="cloud-container">
+            <img src="image/cloud1.png" alt="Cloud Image" class="cloud1">
+        </div>
+        <div class="cloud-container">
+            <img src="image/cloud1.png" alt="Cloud Image" class="cloud2">
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    
 </body>
 </html>

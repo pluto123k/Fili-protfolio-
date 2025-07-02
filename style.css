@@ -84,7 +84,20 @@ nav ul li a {
     left: 100%; 
     }
  }
-    
+.cutecloud {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    width: 30vw;
+    cursor: pointer;
+    max-width: 8%;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    max-width: 20%;
+    height: auto;
+}
 
 .oc {
     animation-name: floating;
@@ -94,7 +107,7 @@ nav ul li a {
     width: 90vw;
      position: absolute; 
     left: 10px; 
-    bottom: -230px;
+    bottom: -300px;
     max-width: 65%; 
     height: auto;
 }
@@ -170,7 +183,7 @@ nav ul li a {
     bottom: 10px;
     right: 70% ;
     left: 50%;
-   top: 50%;
+   top: 0%;
    width: 1588.94px; 
    height: 149px; 
    margin-left: -794.47px; 
@@ -182,12 +195,11 @@ nav ul li a {
 .cloud2 {
      position: absolute;
     left: 50%;
-   top: 90%;
+   top: 40%;
    width: 1588.94px; 
    height: 149px; 
    margin-left: -794.47px; 
    margin-top: -74.5px;
-   z-index: 302;
    animation: moveCloud 10s linear infinite;
    animation-duration: 6s;
 }
@@ -205,26 +217,43 @@ nav ul li a {
 .section2 {
     overflow: hidden; 
     position: relative;
+    padding: 20px;
 }
 
-.portfolio {
-    text-align: center;
+.portfolio-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box; /* Include padding/borders in width */
 }
-  .portfolio-box {
- background-color: rgba(255, 255, 255, 0.137); 
-            border: 1px solid #ccc; /* Box border */
-            border-radius: 5px; /* Rounded corners */
-            padding: 20px; /* Padding inside the box */
-            width: 100%; /* Set width to 80% of the container */
-            height: 500px;
-            max-width: 1800px; /* Optional: Set a maximum width */
-            margin: 20px auto; /* Center the box */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+
+.portfolio-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    border: 1px solid #ccc; /* Box border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    width: 420px;
+    margin-right: 10px; /* Margin between boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.portfolio-box h1 {
+    font-size: 1.5em; /* Adjust font size */
+}
+
+
+.portfolio-box h2 {
+    font-size: 1.5em
+}
+
+.portfolio-box h3{
+    margin-top: 0; /* Remove margin for the heading */
+}
+  
 .side-navigation {
     position: absolute;
     right: 8%;
-    top: 65%;
+    top: 230%;
     transform: translateY(-50%);
 }
 
@@ -236,4 +265,3 @@ nav ul li a {
 .side-navigation ul li {
     margin: 10px 0;
 }
-

@@ -1,20 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Contact</title>
     <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #08cff7;
+        }
 
+        header {
+            text-align: center;
+        }
+
+        .bird {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: zoomOut 2s forwards;
+        }
+
+        .bird img {
+            width: 300px;
+            height: auto;
+        }
+
+        @keyframes zoomOut {
+            0% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(0.5);
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <header>
-     <h1> Contact</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>    
+        <h1>Contact</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>    
     </header>
+    
+    <div class="bird">
+        <img src="image/bird deliver.png" alt="Bird Delivery">
+    </div>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </body>
 </html>
